@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UNIMUS Theme Colors */
+:root {
+    --unimus-blue: #0ea5e9;
+    --unimus-dark-blue: #0369a1;
+    --unimus-light-blue: #38bdf8;
+    --unimus-gold: #fbbf24;
+    --unimus-green: #22c55e;
+    --unimus-accent: #0891b2;
+}
+
+/* Custom UNIMUS styling */
+.unimus-primary {
+    background-color: var(--unimus-blue);
+}
+
+.unimus-text {
+    color: var(--unimus-blue);
+}
+
+.unimus-border {
+    border-color: var(--unimus-blue);
+}
+
+.unimus-hover:hover {
+    background-color: var(--unimus-dark-blue);
+}
+
+.unimus-gold {
+    color: var(--unimus-gold);
+}
+
+.unimus-green {
+    color: var(--unimus-green);
+}

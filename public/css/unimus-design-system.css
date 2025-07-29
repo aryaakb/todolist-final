@@ -1,0 +1,454 @@
+/* 
+ * UNIMUS Design System
+ * Sistem desain terpadu untuk Universitas Muhammadiyah Semarang
+ * Version: 1.0.0
+ */
+
+:root {
+  /* === UNIMUS OFFICIAL COLORS === */
+  --unimus-blue-primary: #0ea5e9;
+  --unimus-blue-secondary: #0891b2;
+  --unimus-blue-dark: #0369a1;
+  --unimus-gold: #fbbf24;
+  --unimus-gold-dark: #f59e0b;
+  --unimus-green: #22c55e;
+  --unimus-green-dark: #16a34a;
+  
+  /* === NEUTRAL COLORS === */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  
+  /* === SEMANTIC COLORS === */
+  --color-success: var(--unimus-green);
+  --color-success-dark: var(--unimus-green-dark);
+  --color-warning: var(--unimus-gold);
+  --color-warning-dark: var(--unimus-gold-dark);
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-info: var(--unimus-blue-primary);
+  --color-info-dark: var(--unimus-blue-dark);
+  
+  /* === TYPOGRAPHY SCALE === */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  --font-xs: 0.75rem;      /* 12px */
+  --font-sm: 0.875rem;     /* 14px */
+  --font-base: 1rem;       /* 16px */
+  --font-lg: 1.125rem;     /* 18px */
+  --font-xl: 1.25rem;      /* 20px */
+  --font-2xl: 1.5rem;      /* 24px */
+  --font-3xl: 1.875rem;    /* 30px */
+  --font-4xl: 2.25rem;     /* 36px */
+  --font-5xl: 3rem;        /* 48px */
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* === SPACING SCALE === */
+  --space-px: 1px;
+  --space-0: 0;
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+  
+  /* === BORDER RADIUS === */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;   /* 2px */
+  --radius-base: 0.25rem;  /* 4px */
+  --radius-md: 0.375rem;   /* 6px */
+  --radius-lg: 0.5rem;     /* 8px */
+  --radius-xl: 0.75rem;    /* 12px */
+  --radius-2xl: 1rem;      /* 16px */
+  --radius-3xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+  
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  
+  /* === Z-INDEX SCALE === */
+  --z-hide: -1;
+  --z-base: 1;
+  --z-docked: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-banner: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-skiplink: 700;
+  --z-toast: 800;
+  --z-tooltip: 900;
+  
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  /* === GRADIENTS === */
+  --gradient-unimus: linear-gradient(135deg, var(--unimus-blue-primary) 0%, var(--unimus-blue-secondary) 100%);
+  --gradient-unimus-gold: linear-gradient(135deg, var(--unimus-blue-primary) 0%, var(--unimus-gold) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--unimus-gold) 0%, #f97316 100%);
+  --gradient-cool: linear-gradient(135deg, var(--unimus-blue-primary) 0%, #3b82f6 100%);
+  
+  /* === BREAKPOINTS (for JavaScript usage) === */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gray-50: #0f172a;
+    --gray-100: #1e293b;
+    --gray-200: #334155;
+    --gray-300: #475569;
+    --gray-400: #64748b;
+    --gray-500: #94a3b8;
+    --gray-600: #cbd5e1;
+    --gray-700: #e2e8f0;
+    --gray-800: #f1f5f9;
+    --gray-900: #f8fafc;
+  }
+}
+
+/* === MANUAL DARK MODE CLASSES === */
+.dark-mode {
+  --bg-primary: #1e293b;
+  --bg-secondary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #475569;
+  --card-bg: rgba(30, 41, 59, 0.9);
+}
+
+.dark-mode .unimus-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark-mode .unimus-card-title {
+  color: var(--text-primary);
+}
+
+.dark-mode .unimus-card-content {
+  color: var(--text-secondary);
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .bg-gray-50 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-mode .text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.dark-mode .text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.dark-mode .border-gray-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* === UTILITY CLASSES === */
+
+/* Colors */
+.text-unimus-primary { color: var(--unimus-blue-primary); }
+.text-unimus-secondary { color: var(--unimus-blue-secondary); }
+.text-unimus-gold { color: var(--unimus-gold); }
+.text-unimus-green { color: var(--unimus-green); }
+
+.bg-unimus-primary { background-color: var(--unimus-blue-primary); }
+.bg-unimus-secondary { background-color: var(--unimus-blue-secondary); }
+.bg-unimus-gold { background-color: var(--unimus-gold); }
+.bg-unimus-green { background-color: var(--unimus-green); }
+
+.border-unimus-primary { border-color: var(--unimus-blue-primary); }
+.border-unimus-secondary { border-color: var(--unimus-blue-secondary); }
+
+/* Gradients */
+.bg-gradient-unimus { background: var(--gradient-unimus); }
+.bg-gradient-unimus-gold { background: var(--gradient-unimus-gold); }
+
+/* Typography */
+.font-primary { font-family: var(--font-family-primary); }
+.font-mono { font-family: var(--font-family-mono); }
+
+/* Shadows */
+.shadow-unimus { 
+  box-shadow: 0 4px 15px -5px rgba(14, 165, 233, 0.4); 
+}
+.shadow-unimus-lg { 
+  box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.3); 
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in { animation: fadeIn var(--transition-base) ease-out; }
+.animate-slide-in-right { animation: slideInRight var(--transition-base) ease-out; }
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.animate-spin { animation: spin 1s linear infinite; }
+
+/* Responsive Utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .container { max-width: 640px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 768px; }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 1024px; }
+}
+
+@media (min-width: 1280px) {
+  .container { max-width: 1280px; }
+}
+
+@media (min-width: 1536px) {
+  .container { max-width: 1536px; }
+}
+
+/* Focus States */
+.focus-unimus:focus {
+  outline: 2px solid var(--unimus-blue-primary);
+  outline-offset: 2px;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Print Styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
+
+/* === FORM ELEMENTS FIXES === */
+/* Pastikan semua form input terlihat dengan jelas */
+input[type="text"],
+input[type="email"], 
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+textarea,
+select {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  font-weight: 500;
+  -webkit-text-fill-color: #1f2937 !important;
+  -webkit-opacity: 1 !important;
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+  font-weight: 400;
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Select options */
+select option {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* Disabled states */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #f9fafb !important;
+  color: #6b7280 !important;
+  -webkit-text-fill-color: #6b7280 !important;
+}
+
+/* Autofill override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #1f2937 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  input[type="text"],
+  input[type="email"], 
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  textarea,
+  select {
+    color: #1f2937 !important;
+    background-color: #ffffff !important;
+  }
+}
+
+/* === FORM ICON POSITIONING FIXES === */
+/* Pastikan icon tidak menghalangi input */
+.form-group .relative {
+  position: relative;
+}
+
+/* Icon kiri (untuk input dengan icon) */
+.form-group .absolute.left-0 {
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Icon kanan (untuk validation dan dropdown) */
+.form-group .absolute.right-0,
+.form-group .absolute.right-8,
+.form-group .absolute.right-10 {
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Pastikan input field selalu di atas background tapi di bawah icon */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  position: relative;
+  z-index: 5;
+}
+
+/* Resize handle untuk textarea */
+.resize-vertical {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Prevent text selection pada icon */
+.form-group .absolute i {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Fix untuk mobile touch targets */
+@media (max-width: 768px) {
+  .form-group .absolute i {
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
